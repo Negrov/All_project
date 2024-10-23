@@ -1,2 +1,10 @@
+from random import choices
+
+import inquirer
+
+
 def user_menu():
-    pass
+    system('cls')
+    questions = [inquirer.List(name='choice', message='Выберете действие',
+                               choices=[''])]
+
