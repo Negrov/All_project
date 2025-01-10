@@ -1,71 +1,12 @@
-import json
-
 import inquirer
+
 from os import system
+from termcolor import colored
 
-from pyexpat.errors import messages
-
-from cinema import Cinema, Room, to_json
-from cinema.main import questions
-
-
-def choose_cinema(cinemas):
-    system('cls')
-    questions1 = [inquirer.List(name='choice', message='Выберете кинотеатр',
-                                choices=[f'{i + 1}){cin.name}' for i, cin in enumerate(cinemas)] + ['Выход'])]
-    choice = inquirer.prompt(questions1)['choice']
-
-    if choice == 'Выход':
-        return
-
-    choice = int(choice[:choice.find(')')]) - 1
-    cinema = cinemas[choice]
-    return cinema
-
-
-def format_num(num):
-    return f'{num: >2}'
-
-
-def create_choice(room, choice_row):
-    result = [f'{str(i + 1): >3}) {room.get_seat()[choice_row][i]}' for i in range(room.len_sub(choice_row))]
-    return result
-
-
-def fill_room(room: Room):
-    while True:
-        system('cls')
-        print(f'Заполните имеющиеся места в зале {room.name}:')
-        questions_big = [
-            inquirer.List(
-                name='seats', message=f'{" " * 4}{" ".join([format_num(i) for i in range(1, room.weight + 1)])}',
-                choices=([f'{str(len(room) - i): >3}) {" ".join(room.get_seat()[i])}' for i in range(len(room))]
-                         + ['Выход'])
-
-            )
-        ]
-        choice = inquirer.prompt(questions_big)['seats']
-        if choice == 'Выход':
-            return
-        row = int(choice[:choice.find(')')])
-        choice_row = len(room) - row
-
-        # _______________места__________________
-        room = room
-        choice_row = choice_row
-        system('cls')
-        print(row, 'ряд')
-        questions_small = [
-            inquirer.Checkbox(
-                'place', message='Выберете место',
-                choices=create_choice(room, choice_row)
-            )
-        ]
-        choice = inquirer.prompt(questions_small)['place']
-        for check in choice:
-            col = int(check[:check.find(')')])
-            choice_col = col - 1
-            room.refact_seat(choice_row, choice_col)
+from cinema import Cinema, Room
+from cinema.utils import from_json
+from move_calendar import MoveCalendar
+from utils import fill_room, choose_cinema, choose_room, step_key
 
 
 def join_cinema():
@@ -91,19 +32,12 @@ def join_cinema():
 
 
 def refact_cinema():
-    cinemas = to_json()
-
     while True:
-        system('cls')
-        questions1 = [inquirer.List(name='choice', message='Выберете кинотеатр',
-                                   choices=[f'{i + 1}){cin.name}' for i, cin in enumerate(cinemas)] + ['Выход'])]
-        choice = inquirer.prompt(questions1)['choice']
+        cinema = choose_cinema()
 
-        if choice == 'Выход':
+        if cinema == 'Выход':
             break
 
-        choice = int(choice[:choice.find(')')]) - 1
-        cinema = cinemas[choice]
         while True:
             cinema = cinema
             system('cls')
@@ -116,42 +50,39 @@ def refact_cinema():
 
             elif choice == 'Название':
                 system('cls')
-                name = input('Введите новое название или enter для отмены\n')
-                cinema.name = name if name else cinema.name
+                name = input('[' + colored('?', 'yellow') + '] ' + 'Введите новое название или enter для отмены\n')
+                cinema.name = name.strip() if name else cinema.name
 
-            else:
+            elif choice == 'Залы':
                 while True:
                     cinema = cinema
-                    system('cls')
-                    questions_rooms = [inquirer.List(name='choice', message='Выберете зал',
-                                                     choices=[f'{i + 1}.' for i in range(len(cinema))] + ['Выход'])]
-                    choice = inquirer.prompt(questions_rooms)['choice']
+                    room = choose_room(cinema)
 
-                    if choice == 'Выход':
+                    if room == 'Выход':
                         break
 
-                    room = cinema.get_rooms()[int(choice[:choice.find('.')]) - 1]
                     fill_room(room)
 
         cinema.wright_json()
 
 
 def join_seance():
-    cinema = choose_cinema(to_json())
-    cinemas = to_json()
     while True:
-        system('cls')
-        cinema_check = [inquirer.List(name='choice', message='Выберете кинотеатр',
-                                choices=[f'{i + 1}){cin.name}' for i, cin in enumerate(cinemas)] + ['Выход'])]
-        choice = inquirer.prompt(cinema_check)['choice']
+        cinema = choose_cinema()
 
-        if choice == 'Выход':
+        if cinema == 'Выход':
             break
 
-        choice = int(choice[:choice.find(')')]) - 1
-        cinema = cinemas[choice]
+        calendar = MoveCalendar()
+        date, count_enter = step_key(calendar)
+        [input() for _ in range(count_enter)]
 
-
+        for sceance in date:
+            system('cls')
+            print('[' + colored('?', 'yellow') + '] День фильма: ' + str(sceance))
+            name_scene = input('[' + colored('?', 'yellow') + '] Введите название ' + colored('премьеры', 'green') + ': \n\t').strip()
+            begin_time = input('[' + colored('?', 'yellow') + '] Введите начало время фильма в формате xx:xx(при необходимости и микросек.): \n\t').strip()
+            end_time = input('[' + colored('?', 'yellow') + '] Введите конца время фильма в формате xx:xx(при необходимости и микросек.): \n\t').strip()
 
 
 

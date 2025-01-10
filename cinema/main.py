@@ -16,10 +16,8 @@ while True:
 
     if choice == 'Покупатель':
         user_menu()
-        # print("user_nemu")
     elif choice == 'Администатор':
         root_menu()
-        # print('Root')
     if choice == 'Выход':
         print("Выход из программы.")
         break

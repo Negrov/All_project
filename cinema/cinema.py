@@ -1,27 +1,9 @@
 import json
-import time
+import datetime
 
 
-def refact(data, val, dic):
-    data[val] = dic
-
-def to_json():
-    # with open('cinema/cinema.json', 'r') as infile:
-    with open('C:\\Users\\Negrov\\PycharmProjects\\pythonProject3\\cinema\\db_cinema.json', 'r') as infile:
-        db_data = json.load(infile)
-    data = db_data['db']
-
-    cinemas = list()
-    for cinema in data:
-        rooms = cinema['rooms']
-        for i, room in enumerate(rooms):
-            print(room)
-            input()
-            rooms[i] = Room(room['name'], room['seats'])
-            print(rooms[i].name, rooms[i].get_seat())
-            input()
-        cinemas.append(Cinema(cinema['name'], rooms))
-    return cinemas
+# def refact(data, val, dic):
+#     data[val] = dic
 
 
 class Room:
@@ -33,16 +15,21 @@ class Room:
 
         self.seance = dict()
 
-    def add_seance(self, month, day, time_seance, seance):
-        if self.valid(month, day, time_seance):
+    def add_seance(self, date, time_seance, seance):
+        """time_sceance  —  нач-кон (нач — hour:min)"""
+        month = date.month
+        day = date.day
+
+        if not self.valid(month, day, time_seance):
             return False
 
-        self.seance[month] = (
-            self.seance[mounth][day].update({time_seance: Seance(seance, self._seats.copy())}) if day in self.seance[
-                mounth] else
-            self.seance[
-                mounth].update({day: {time_seance: Seance(seance, self._seats.copy())}})) if month in self.seance else {
-            day: {time_seance: Seance(seance, self._seats.copy())}}
+        if month in self.seance:
+            if day in self.seance[mounth]:
+                self.seance[mounth][day].update({time_seance: Seance(seance, self._seats.copy())})
+            else:
+                self.seance[mounth].update({day: {time_seance: Seance(seance, self._seats.copy())}})
+        else:
+            self.seance[month] = {day: {time_seance: Seance(seance, self._seats.copy())}}
         return True
 
     def __len__(self):
@@ -69,28 +56,28 @@ class Room:
         return self.name
 
     def valid(self, month, day, time_active):
-        if month not in self.seance:
-            return False
-        if day not in self.seance[month]:
-            return False
+        if month not in self.seance or day not in self.seance[month]:
+            return True
 
         try:
             review_time = [datetime.time(*[int(j) for j in i.split(':')]) for i in time_active.split('-')]
             time_list = [[datetime.time(*[int(j) for j in i.split(':')]) for i in k.split('-')] for k in
                          self.seance[month][day].keys()]
         except ValueError:
-            return True
+            return False
 
         for i in time_list:
-            if i[0] <= review_time[0] <= i[1] or i[0] <= review_time[1] <= i[1]:
-                return True
-        return False
+            if i[0] <= review_time[0] <= i[1] or i[0] <= review_time[1] <= i[1] \
+                    or any([review_time[0] <= j <= review_time[1] for j in i]):
+                return False
+        return True
 
 
 class Cinema:
-    def __init__(self, name, rooms: list[Room]):
+    def __init__(self, name, rooms: list[Room, ...], _name=None):
         self.name = name
         self.rooms = rooms
+        self._name = _name
 
     def get_rooms(self):
         return self.rooms
@@ -115,7 +102,7 @@ class Cinema:
 
         flag = False
         for i, data in enumerate(db_data['db']):
-            if data['name'] == self.name:
+            if data['name'] in (self.name, self._name):
                 flag = True
                 db_data['db'][i] = {'name': self.name, 'rooms': self._to_dict_room}
 
