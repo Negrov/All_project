@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d348266f-cbdc-43ea-992f-8df9c626197c" name="Changes" comment="refact" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "assignee": "Negrov"
+    }
+  ],
+  "lastFilter": {}
+}]]></component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Negrov/All_project&quot;,
+    &quot;accountId&quot;: &quot;bbc4579f-f7ab-454e-84b9-71bd256382d6&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2leogQOvJaQP3cSyTpX5obsQT6N" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.Button.executor": "Run",
+    "Python.Olimp.executor": "Run",
+    "Python.Saper (2).executor": "Run",
+    "Python.calc.executor": "Run",
+    "Python.cinema.executor": "Run",
+    "Python.ege.executor": "Run",
+    "Python.flag.executor": "Run",
+    "Python.lox.executor": "Run",
+    "Python.main.executor": "Debug",
+    "Python.move_calendar.executor": "Run",
+    "Python.rest.executor": "Run",
+    "Python.root_menu.executor": "Debug",
+    "Python.scriptik.executor": "Run",
+    "Python.tests.executor": "Run",
+    "Python.user_menu.executor": "Run",
+    "Python.utils.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "C:/Users/Negrov/PycharmProjects/pythonProject3/cinema/utils.py",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.splitter.proportion": "0.25280327",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Negrov\PycharmProjects\pythonProject3" />
+      <recent name="C:\Users\Negrov\PycharmProjects\pythonProject3\cinima" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="All_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="All_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="All_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="All_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="All_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <module name="All_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <module name="All_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="All_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="All_project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PY-242.21829.153" />
+        <option value="bundled-python-sdk-464836ebc622-b74155a9e76b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.21829.153" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d348266f-cbdc-43ea-992f-8df9c626197c" name="Changes" comment="" />
+      <created>1725550013819</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725550013819</updated>
+      <workItem from="1725550168298" duration="3702000" />
+      <workItem from="1725858956065" duration="4048000" />
+      <workItem from="1726487178258" duration="15099000" />
+      <workItem from="1726643720792" duration="357000" />
+      <workItem from="1726644087698" duration="1007000" />
+      <workItem from="1726645145905" duration="32000" />
+      <workItem from="1726645303781" duration="3080000" />
+      <workItem from="1726663362301" duration="15135000" />
+      <workItem from="1726825487082" duration="11709000" />
+      <workItem from="1727092530583" duration="25841000" />
+      <workItem from="1727626381480" duration="8494000" />
+      <workItem from="1727699472956" duration="25680000" />
+      <workItem from="1727782772176" duration="420000" />
+      <workItem from="1727783206388" duration="36000" />
+      <workItem from="1727890538635" duration="3368000" />
+      <workItem from="1727956183548" duration="5127000" />
+      <workItem from="1728031957479" duration="8395000" />
+      <workItem from="1728131767011" duration="633000" />
+      <workItem from="1728201084698" duration="3268000" />
+      <workItem from="1728224974630" duration="2718000" />
+      <workItem from="1728250052626" duration="470000" />
+      <workItem from="1728285313680" duration="2317000" />
+      <workItem from="1728311901725" duration="16111000" />
+      <workItem from="1728405498266" duration="1420000" />
+      <workItem from="1728504581944" duration="3168000" />
+      <workItem from="1728555438242" duration="13227000" />
+      <workItem from="1728574066736" duration="1456000" />
+      <workItem from="1728582421365" duration="9903000" />
+      <workItem from="1728642422758" duration="10682000" />
+      <workItem from="1728718260506" duration="1114000" />
+      <workItem from="1728889975725" duration="9871000" />
+      <workItem from="1728915264657" duration="18275000" />
+      <workItem from="1728997951491" duration="9817000" />
+      <workItem from="1729009820174" duration="2078000" />
+      <workItem from="1729013144058" duration="2746000" />
+      <workItem from="1729103796709" duration="3794000" />
+      <workItem from="1729159016621" duration="20469000" />
+      <workItem from="1729322059708" duration="4999000" />
+      <workItem from="1729434758751" duration="2060000" />
+      <workItem from="1729449317951" duration="9264000" />
+      <workItem from="1729481625873" duration="4531000" />
+      <workItem from="1729508725849" duration="6295000" />
+      <workItem from="1729609996293" duration="12923000" />
+      <workItem from="1729667207006" duration="5508000" />
+      <workItem from="1729714164328" duration="472000" />
+      <workItem from="1729769117116" duration="8795000" />
+      <workItem from="1729833840941" duration="565000" />
+      <workItem from="1730115728101" duration="13249000" />
+      <workItem from="1730199383372" duration="11895000" />
+      <workItem from="1730289113051" duration="4926000" />
+      <workItem from="1730565697694" duration="20000" />
+      <workItem from="1730620056536" duration="1450000" />
+      <workItem from="1730735253576" duration="5323000" />
+      <workItem from="1730756094276" duration="3140000" />
+      <workItem from="1730830046553" duration="8792000" />
+      <workItem from="1730877613622" duration="4776000" />
+      <workItem from="1730981573084" duration="11448000" />
+      <workItem from="1731053283820" duration="1553000" />
+      <workItem from="1731082486620" duration="1175000" />
+      <workItem from="1731086745771" duration="653000" />
+      <workItem from="1731240420959" duration="32000" />
+      <workItem from="1732392991369" duration="4134000" />
+      <workItem from="1732461730241" duration="171000" />
+      <workItem from="1732490498597" duration="776000" />
+      <workItem from="1733139696094" duration="10211000" />
+      <workItem from="1733327406023" duration="10174000" />
+      <workItem from="1733399204429" duration="604000" />
+      <workItem from="1733841965952" duration="5261000" />
+      <workItem from="1733901455487" duration="4959000" />
+      <workItem from="1734105127863" duration="7567000" />
+      <workItem from="1734252981438" duration="34000" />
+      <workItem from="1734253097307" duration="449000" />
+      <workItem from="1734253746937" duration="3833000" />
+      <workItem from="1734263451314" duration="11868000" />
+      <workItem from="1734350176098" duration="8455000" />
+      <workItem from="1734447401771" duration="948000" />
+      <workItem from="1734444803812" duration="6799000" />
+      <workItem from="1734497441449" duration="3996000" />
+      <workItem from="1734608506694" duration="6615000" />
+      <workItem from="1734800863883" duration="2836000" />
+      <workItem from="1734889537503" duration="997000" />
+      <workItem from="1734894716141" duration="6644000" />
+      <workItem from="1734965712021" duration="1463000" />
+      <workItem from="1734976594316" duration="8649000" />
+      <workItem from="1735018370677" duration="1988000" />
+      <workItem from="1735021263819" duration="312000" />
+      <workItem from="1735021713991" duration="2199000" />
+      <workItem from="1735027165938" duration="149000" />
+      <workItem from="1735296201409" duration="22717000" />
+      <workItem from="1735481670149" duration="2631000" />
+      <workItem from="1735487708990" duration="14316000" />
+      <workItem from="1735733045123" duration="9493000" />
+      <workItem from="1736011621503" duration="1585000" />
+      <workItem from="1736013315866" duration="14679000" />
+      <workItem from="1736078650934" duration="3495000" />
+      <workItem from="1736082799638" duration="4689000" />
+      <workItem from="1736100658087" duration="1049000" />
+      <workItem from="1736528234472" duration="3326000" />
+    </task>
+    <task id="LOCAL-00001" summary="load project">
+      <option name="closed" value="true" />
+      <created>1728569251060</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728569251060</updated>
+    </task>
+    <task id="LOCAL-00002" summary="little modifiec">
+      <option name="closed" value="true" />
+      <created>1728891134582</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728891134582</updated>
+    </task>
+    <task id="LOCAL-00003" summary="little modifiec">
+      <option name="closed" value="true" />
+      <created>1728891143735</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728891143735</updated>
+    </task>
+    <task id="LOCAL-00004" summary="refact">
+      <option name="closed" value="true" />
+      <created>1729714311062</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729714311062</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refact">
+      <option name="closed" value="true" />
+      <created>1736532552053</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736532552053</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="load project" />
+    <MESSAGE value="little modifiec" />
+    <MESSAGE value="refact" />
+    <option name="LAST_COMMIT_MESSAGE" value="refact" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/.venv/Lib/site-packages/art/__init__.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/All_project$ege.coverage" NAME="ege Coverage Results" MODIFIED="1731018189998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProject3$calc.coverage" NAME="calc Coverage Results" MODIFIED="1727960833360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/All_project$flag.coverage" NAME="flag Coverage Results" MODIFIED="1728899731281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/All_project$rest.coverage" NAME="rest Coverage Results" MODIFIED="1736016015437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProject3$main.coverage" NAME="main Coverage Results" MODIFIED="1728568550199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cinema" />
+    <SUITE FILE_PATH="coverage/All_project$cinema.coverage" NAME="cinema Coverage Results" MODIFIED="1736529806575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cinema" />
+    <SUITE FILE_PATH="coverage/All_project$scriptik.coverage" NAME="scriptik Coverage Results" MODIFIED="1730878789843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/All_project$lox.coverage" NAME="lox Coverage Results" MODIFIED="1728719374296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/All_project$calc.coverage" NAME="calc Coverage Results" MODIFIED="1735484398155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/All_project$tests.coverage" NAME="tests Coverage Results" MODIFIED="1736101038749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/All_project$move_calendar.coverage" NAME="move_calendar Coverage Results" MODIFIED="1736024893940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cinema" />
+    <SUITE FILE_PATH="coverage/pythonProject3$Olimp.coverage" NAME="Olimp Coverage Results" MODIFIED="1728564659036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/All_project$root_menu.coverage" NAME="root_menu Coverage Results" MODIFIED="1736023494981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cinema" />
+    <SUITE FILE_PATH="coverage/All_project$utils.coverage" NAME="utils Coverage Results" MODIFIED="1736025934847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cinema" />
+    <SUITE FILE_PATH="coverage/pythonProject3$Button.coverage" NAME="Button Coverage Results" MODIFIED="1727958208339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProject3$Saper__2_.coverage" NAME="Saper (2) Coverage Results" MODIFIED="1726851313691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
+    <SUITE FILE_PATH="coverage/All_project$main.coverage" NAME="main Coverage Results" MODIFIED="1736023505324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cinema" />
+    <SUITE FILE_PATH="coverage/All_project$user_menu.coverage" NAME="user_menu Coverage Results" MODIFIED="1728678200379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cinema" />
+  </component>
+</project>
