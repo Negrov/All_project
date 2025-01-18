@@ -1,23 +1,22 @@
 import inquirer
+import datetime
 
 from os import system
 from termcolor import colored
 
 from cinema import Cinema, Room
-from cinema.utils import from_json
 from move_calendar import MoveCalendar
-from utils import fill_room, choose_cinema, choose_room, step_key
+from utils import fill_room, choose_cinema, choose_room, step_key, from_json
 
 
 def join_cinema():
     system('cls')
-    name = input('Название кинотеатра:\n')
-    rooms = input('Нипишите залы (формат ввода: Название1, Название2, Название3 и т.д\n')
-    while (rooms.find(', ') == -1 or len(rooms) == 0) and not rooms.isdigit():
-        system('cls')
-        print('Неверный ввод залов.')
-        rooms = input('Нипишите залы (формат ввода: Название1, Название2, Название3 и т.д\n')
-    rooms = [Room(i) for i in sorted(set(rooms.strip().split(', ')))]
+    name = input('[' + colored('?', 'yellow') + '] ' + 'Название кинотеатра:\n').strip()
+    if not name:
+        return
+    _rooms = input(
+        '[' + colored('?', 'yellow') + '] ' + 'Нипишите залы (формат ввода: Название1, Название2, Название3 и т.д\n')
+    rooms = [Room(i) for i in sorted(set(_rooms.strip().split(', ')))] if ', ' in _rooms else [_rooms.strip()]
     cinema = Cinema(name, rooms)
     for room in cinema.get_rooms():
         system('cls')
@@ -32,6 +31,7 @@ def join_cinema():
 
 
 def refact_cinema():
+    is_del = False
     while True:
         cinema = choose_cinema()
 
@@ -42,7 +42,7 @@ def refact_cinema():
             cinema = cinema
             system('cls')
             questions_refact = [inquirer.List(name='choice', message=f'Отредактируйте кинотеатр: {cinema.name}',
-                                              choices=['Название', 'Залы', 'Выход'])]
+                                              choices=['Название', 'Залы', 'Удалить', 'Выход'])]
             choice = inquirer.prompt(questions_refact)['choice']
 
             if choice == 'Выход':
@@ -50,8 +50,13 @@ def refact_cinema():
 
             elif choice == 'Название':
                 system('cls')
-                name = input('[' + colored('?', 'yellow') + '] ' + 'Введите новое название или enter для отмены\n')
+                name = input('[' + colored('?', 'yellow') + '] ' + 'Введите новое название или enter для отмены:\n')
                 cinema.name = name.strip() if name else cinema.name
+
+            elif choice == 'Удалить':
+                is_del = True
+                cinema.del_in_json()
+                break
 
             elif choice == 'Залы':
                 while True:
@@ -61,9 +66,28 @@ def refact_cinema():
                     if room == 'Выход':
                         break
 
-                    fill_room(room)
+                    while True:
+                        system('cls')
 
-        cinema.wright_json()
+                        questions_set_room = [
+                            inquirer.List(name='choice', message=f'Отредактируйте кинотеатр: {room.name}',
+                                          choices=['Название', 'Места', 'Удалить', 'Выход'])]
+                        mini_choice = inquirer.prompt(questions_set_room)['choice']
+
+                        if mini_choice == 'Выход':
+                            break
+                        elif mini_choice == 'Места':
+                            fill_room(room)
+                        elif mini_choice == 'Название':
+                            system('cls')
+                            name = input(
+                                '[' + colored('?', 'yellow') + '] ' + 'Введите новое название или enter для отмены:\n')
+                            room.name = name.strip() if name else room.name
+                        elif mini_choice == 'Удалить':
+                            cinema.rooms.remove(room)
+
+        if not is_del:
+            cinema.wright_json()
 
 
 def join_seance():
@@ -73,18 +97,45 @@ def join_seance():
         if cinema == 'Выход':
             break
 
-        calendar = MoveCalendar()
-        date, count_enter = step_key(calendar)
-        [input() for _ in range(count_enter)]
+        while True:
 
-        for sceance in date:
-            system('cls')
-            print('[' + colored('?', 'yellow') + '] День фильма: ' + str(sceance))
-            name_scene = input('[' + colored('?', 'yellow') + '] Введите название ' + colored('премьеры', 'green') + ': \n\t').strip()
-            begin_time = input('[' + colored('?', 'yellow') + '] Введите начало время фильма в формате xx:xx(при необходимости и микросек.): \n\t').strip()
-            end_time = input('[' + colored('?', 'yellow') + '] Введите конца время фильма в формате xx:xx(при необходимости и микросек.): \n\t').strip()
+            room = choose_room(cinema)
 
+            if room == 'Выход':
+                break
 
+            calendar = MoveCalendar()
+            date, count_enter = step_key(calendar)
+            [input() for _ in range(count_enter)]
+
+            for date_i in date:
+                while True:
+                    system('cls')
+                    print('[' + colored('?', 'yellow') + '] День фильма: ' + str(date_i))
+
+                    name_scene = input(
+                        '[' + colored('?', 'yellow') + '] Введите название ' + colored('премьеры',
+                                                                                       'green') + '(или enter для пропуска сеанса): \n\t').strip()
+                    if not name_scene:
+                        break
+
+                    begin_time = input('[' + colored('?',
+                                                     'yellow') + '] Введите начало время фильма в формате xx:xx(при необходимости и микросек.): \n\t').strip()
+                    end_time = input('[' + colored('?',
+                                                   'yellow') + '] Введите конца время фильма в формате xx:xx(при необходимости и микросек.): \n\t').strip()
+
+                    try:
+                        if datetime.time(*[int(i) for i in begin_time.split(':')]) >= datetime.time(
+                                *[int(i) for i in end_time.split(':')]):
+                            raise ValueError
+                    except ValueError:
+                        input('[' + colored('!', 'red') + '] ' + 'Неверное время, enter для продолжения.')
+                        continue
+
+                    room.add_seance(date_i, f'{begin_time}-{end_time}', name_scene)
+                    input('[' + colored('.', 'green') + '] ' + 'Успешно добавлено, enter для продолжения.')
+                    break
+        cinema.wright_json()
 
 
 def remove_seance():

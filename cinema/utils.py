@@ -5,9 +5,8 @@ from time import sleep
 import json
 import inquirer
 
-from cinema import Room, Cinema
 from _utils import format_num, local_move, create_choice
-from cinema.cinema import Seance, Room, Cinema
+from cinema import Seance, Room, Cinema
 
 
 def fill_room(room: Room):
@@ -131,7 +130,7 @@ def step_key(calendar):
 
 def from_json():
     # with open('cinema/cinema.json', 'r') as infile:
-    with open('C:\\Users\\Negrov\\PycharmProjects\\pythonProject3\\cinema\\db_cinema.json', 'r') as infile:
+    with open('C:\\Users\\Negrov\\PycharmProjects\\All_project\\cinema\\db_cinema.json', 'r') as infile:
         db_data = json.load(infile)
     data = db_data['db']
 

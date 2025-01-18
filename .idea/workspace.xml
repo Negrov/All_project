@@ -21,14 +21,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "assignee": "Negrov"
+      &quot;assignee&quot;: &quot;Negrov&quot;
     }
   ],
-  "lastFilter": {}
-}]]></component>
+  &quot;lastFilter&quot;: {}
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Negrov/All_project&quot;,
@@ -65,6 +65,7 @@
     "Python.utils.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "ignore_missing_gitignore": "true",
     "last_opened_file_path": "C:/Users/Negrov/PycharmProjects/pythonProject3/cinema/utils.py",
@@ -360,6 +361,7 @@
       <workItem from="1736082799638" duration="4689000" />
       <workItem from="1736100658087" duration="1049000" />
       <workItem from="1736528234472" duration="3326000" />
+      <workItem from="1736532768880" duration="395000" />
     </task>
     <task id="LOCAL-00001" summary="load project">
       <option name="closed" value="true" />
@@ -401,7 +403,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736532552053</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refact">
+      <option name="closed" value="true" />
+      <created>1736532835717</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736532835717</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

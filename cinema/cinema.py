@@ -74,7 +74,7 @@ class Room:
 
 
 class Cinema:
-    def __init__(self, name, rooms: list[Room, ...], _name=None):
+    def __init__(self, name, rooms: list[Room], _name=None):
         self.name = name
         self.rooms = rooms
         self._name = _name
@@ -97,7 +97,7 @@ class Cinema:
 
     def wright_json(self):
         # with open('cinema.json', 'r') as db:
-        with open('C:\\Users\\Negrov\\PycharmProjects\\pythonProject3\\cinema\\db_cinema.json', 'r') as db:
+        with open('C:\\Users\\Negrov\\PycharmProjects\\All_project\\cinema\\db_cinema.json', 'r') as db:
             db_data: dict = json.load(db)
 
         flag = False
@@ -105,14 +105,29 @@ class Cinema:
             if data['name'] in (self.name, self._name):
                 flag = True
                 db_data['db'][i] = {'name': self.name, 'rooms': self._to_dict_room}
+                break
 
         # with open('cinema\\db_cinema.json', 'w') as db:
-        with open('C:\\Users\\Negrov\\PycharmProjects\\pythonProject3\\cinema\\db_cinema.json', 'w') as db:
+        with open('C:\\Users\\Negrov\\PycharmProjects\\All_project\\cinema\\db_cinema.json', 'w') as db:
             db_data if flag else db_data['db'].append({'name': self.name, 'rooms': self._to_dict_room})
             json.dump(db_data, db)
 
     def __str__(self):
         return f'{self.name}: {", ".join([room.name for room in self.rooms])}'
+
+    def del_in_json(self):
+        # with open('cinema.json', 'r') as db:
+        with open('C:\\Users\\Negrov\\PycharmProjects\\All_project\\cinema\\db_cinema.json', 'r') as db:
+            db_data: dict = json.load(db)
+
+        for i, data in enumerate(db_data['db']):
+            if data['name'] in (self.name, self._name):
+                db_data['db'].pop(i)
+                break
+
+        # with open('cinema\\db_cinema.json', 'w') as db:
+        with open('C:\\Users\\Negrov\\PycharmProjects\\All_project\\cinema\\db_cinema.json', 'w') as db:
+            json.dump(db_data, db)
 
 
 class Seance:

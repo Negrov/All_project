@@ -1,7 +1,6 @@
-from random import choices
-
 import inquirer
 
+from os import  system
 
 def user_menu():
     system('cls')
